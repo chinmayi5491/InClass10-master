@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://E:\UNCC\Spring 2018\Android Projects\InClass10\Application\Final\InClass10-master\.idea\InClass10.iml" filepath="E:\UNCC\Spring 2018\Android Projects\InClass10\Application\Final\InClass10-master\.idea\InClass10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InClass10-master.iml" filepath="$PROJECT_DIR$/InClass10-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\UNCC\Spring 2018\Android Projects\InClass10\Application\Final\InClass10-master\app\app.iml" filepath="E:\UNCC\Spring 2018\Android Projects\InClass10\Application\Final\InClass10-master\app\app.iml" />
+    </modules>
+  </component>
+</project>
