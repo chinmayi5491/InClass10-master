@@ -111,29 +111,6 @@ public class MessageThreads extends AppCompatActivity {
             }
         });
 
-        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ViewGroup vg  = (ViewGroup)view;
-
-                //vg.remove= (ImageButton) findViewById(R.id.imageButtonDelete);
-                viewHolder.remove.setOnClickListener(
-                        new View.OnClickListener() {
-                            public void onClick(View v) {
-                                Log.d("demo","ImageButton clicked"+ position);
-
-                            }
-                        });
-                Intent intent = new Intent(MessageThreads.this, ChatroomActivity.class);
-                // String message = "abc";
-                intent.putExtra(EXTRA_MESSAGE,TP);
-                startActivity(intent);
-                // int i  = (Integer) parent.getItemAtPosition(position);
-                Log.d("demo", "Listview at " + position);
-
-            }
-        });*/
-
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -147,6 +124,7 @@ public class MessageThreads extends AppCompatActivity {
                 startActivity(intent);
                // int i  = (Integer) parent.getItemAtPosition(position);
                 Log.d("demo", "Listview at " + position);
+
 
             }
         });

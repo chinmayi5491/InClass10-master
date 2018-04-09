@@ -21,17 +21,20 @@ import java.util.List;
  */
 
 public class MessageThreadsAdapter extends ArrayAdapter<Thread> {
+
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
        final Thread thread= getItem(position);
         final ViewHolder viewHolder;
-        ListView lv;
+
+       final ListView lv;
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.listview_thread_message,parent,false);
             viewHolder = new ViewHolder();
             viewHolder.MessageThread= (TextView) convertView.findViewById(R.id.MessageThread);
             viewHolder.remove= (ImageButton) convertView.findViewById(R.id.imageButtonDelete);
+            viewHolder.mListView = (ListView)convertView.findViewById(R.id.threadListView);
             /*viewHolder.textViewEmail= (TextView) convertView.findViewById(R.id.textViewEmail);*/
             convertView.setTag(viewHolder);
 
@@ -47,11 +50,13 @@ public class MessageThreadsAdapter extends ArrayAdapter<Thread> {
 
 
         }
-        viewHolder.remove= (ImageButton) convertView.findViewById(R.id.imageButtonDelete);
+        lv =viewHolder.mListView;
+       viewHolder.remove= (ImageButton) convertView.findViewById(R.id.imageButtonDelete);
         viewHolder.remove.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
-                        Log.d("demo","ImageButton clicked"+ position);
+                        int i = position;
+                        Log.d("Demo", "Remove button clicked" + position );
 
                     }
                 });
@@ -64,14 +69,15 @@ public class MessageThreadsAdapter extends ArrayAdapter<Thread> {
     private static class ViewHolder{
         TextView MessageThread;
         ImageButton remove;
+        ListView mListView;
 
 
 
     }
-/*ublic interface CallActivity{
-    public void callIntent();
 
-    }*/
+
+
+
     public MessageThreadsAdapter(@NonNull Context context, int resource, @NonNull List<Thread> objects) {
         super(context, resource, objects);
     }
