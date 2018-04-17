@@ -62,7 +62,7 @@ public class MessageThreads extends AppCompatActivity {
             truncatedThreadList.add(threadToAdd);
         }
 
-        listView = findViewById(R.id.threadListView);
+        listView = findViewById(R.id.threadRecycleListView);
 
         adapter = new MessageThreadsAdapter(MessageThreads.this, R.layout.activity_message_threads, truncatedThreadList);
        listView.setAdapter(adapter);

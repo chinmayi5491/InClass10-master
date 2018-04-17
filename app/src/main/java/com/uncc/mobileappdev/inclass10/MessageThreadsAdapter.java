@@ -34,7 +34,7 @@ public class MessageThreadsAdapter extends ArrayAdapter<Thread> {
             viewHolder = new ViewHolder();
             viewHolder.MessageThread= (TextView) convertView.findViewById(R.id.MessageThread);
             viewHolder.remove= (ImageButton) convertView.findViewById(R.id.imageButtonDelete);
-            viewHolder.mListView = (ListView)convertView.findViewById(R.id.threadListView);
+            viewHolder.mListView = (ListView)convertView.findViewById(R.id.threadRecycleListView);
             /*viewHolder.textViewEmail= (TextView) convertView.findViewById(R.id.textViewEmail);*/
             convertView.setTag(viewHolder);
 
